@@ -1,4 +1,6 @@
 # TALLER-GRUPAL-MRL
+video: https://drive.google.com/drive/folders/1sNNCMC45Hr6k4WR09igfJWi1ZosH05T0?usp=sharing
+
 El código crea una interfaz gráfica (GUI) en JavaFX para visualizar datos relacionados con la Fórmula 1. Aquí tienes un resumen de lo que hace y muestra la aplicación:
 
 Título de la ventana:
