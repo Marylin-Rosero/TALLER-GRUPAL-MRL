@@ -1,25 +1,41 @@
 # TALLER-GRUPAL-MRL
-TALLER GRUPAL-CONSTRUCTORES-
-El código crea una aplicación de escritorio en Java que muestra información sobre los constructores de Fórmula 1 de un año específico seleccionado por el usuario. A continuación se detalla lo que hace el código y qué presenta:
+El código crea una interfaz gráfica (GUI) en JavaFX para visualizar datos relacionados con la Fórmula 1. Aquí tienes un resumen de lo que hace y muestra la aplicación:
 
-Lo que Hace el Código Conexión a la Base de Datos:
+Título de la ventana:
 
-Se conecta a una base de datos PostgreSQL que contiene información sobre carreras de Fórmula 1. Creación de la Interfaz Gráfica:
+La ventana principal de la aplicación tiene el título "FORMULA #1".
+Etiquetas y botones en la interfaz principal:
 
-Crea una ventana (JFrame) con un título descriptivo. Añade un menú desplegable (JComboBox) para que el usuario pueda seleccionar un año. Añade una tabla (JTable) que muestra información sobre los constructores de Fórmula 1 para el año seleccionado. Usa un DefaultTableCellRenderer para centrar el contenido de las celdas de la tabla. Poblar el Menú Desplegable:
+Etiqueta de Título: Muestra "RESULTADOS DE LA FORMULA #1" en grande y en negrita.
+Etiqueta de Instrucción: Muestra "SELECCIONE EL DATO QUE DESEA VISUALIZAR" para guiar al usuario.
+Botones:
+"CONSULTAR RESULTADOS DE LOS DRIVERS": Abre una nueva ventana para consultar los resultados de los conductores.
+"CONSULTAR RESULTADOS DE LOS CONSTRUCTORS": Abre una nueva ventana para consultar los resultados de los constructores.
+"CONSULTAR GRAFICO DE BARRAS DE LOS DRIVERS": Abre una nueva ventana con un gráfico de barras que muestra los resultados de los conductores.
+"CONSULTAR GRAFICO DE BARRAS DE LOS CONSTRUCTORS": Abre una nueva ventana con un gráfico de barras que muestra los resultados de los constructores.
+Diseño y Estilo:
 
-Llena el JComboBox con años disponibles obtenidos de la base de datos. Actualizar la Tabla en Segundo Plano:
+Los botones están estilizados con diferentes colores para diferenciarlos visualmente:
+Verde para los resultados de los conductores.
+Azul para los resultados de los constructores.
+Amarillo para el gráfico de los conductores.
+Naranja para el gráfico de los constructores.
+La interfaz utiliza un diseño vertical (VBox) con un espacio de 20 píxeles entre los elementos y un relleno de 50 píxeles alrededor.
+El fondo de la ventana principal es de color azul claro (LIGHTBLUE).
+Acciones de los Botones:
 
-Cuando el usuario selecciona un año en el JComboBox, se ejecuta una consulta en segundo plano usando SwingWorker para obtener los datos de los constructores de ese año. La consulta SQL obtiene el nombre del constructor, el número de victorias, los puntos totales y la posición en el ranking. Los datos obtenidos se utilizan para actualizar el modelo de la tabla, que a su vez actualiza la vista en la interfaz gráfica. Qué Presenta el Código Interfaz de Usuario:
+Al hacer clic en los botones, se abren nuevas ventanas específicas para cada acción:
+openConductoresWindow(): Abre una ventana para consultar los resultados de los conductores usando VentanaConductores.
+openConstructoresWindow(): Abre una ventana para consultar los resultados de los constructores usando VentanaConstructores.
+openGraficoConductoresWindow(): Abre una ventana con un gráfico de barras de los conductores usando GraficoConductores.
+openGraficoConstructoresWindow(): Abre una ventana con un gráfico de barras de los constructores usando GraficoConstructores.
+En resumen:
+La aplicación muestra una interfaz gráfica con botones que permiten al usuario:
 
-Una ventana (JFrame) titulada "Tabla de Constructores por Año". Menú Desplegable:
-
-Un JComboBox en la parte superior de la ventana, que permite al usuario seleccionar un año. Tabla de Datos:
-
-Una JTable en el centro de la ventana que muestra la siguiente información sobre los constructores de Fórmula 1 para el año seleccionado: Constructors: El nombre del constructor. Wins: El número de victorias. Total Points: Los puntos totales acumulados. Rank: La posición en el ranking basado en los puntos totales. La tabla se actualiza dinámicamente en función del año seleccionado por el usuario, proporcionando una vista interactiva y actualizada de los datos de los constructores.
-
-![347049343-a9dedb93-3ddb-4292-8092-3989229904e4](https://github.com/Marylin-Rosero/TALLER-GRUPAL-MRL/assets/169502533/509f3720-27ba-48a3-a529-faeba0fc66b2)
-![347049290-a29c4f9a-a790-4294-8033-0589af648af1](https://github.com/Marylin-Rosero/TALLER-GRUPAL-MRL/assets/169502533/93ae719c-b15b-4766-96e3-b488a56bc8c8)
-![347049244-d10b685b-6fdc-4ab8-86e0-bf67a0b265aa](https://github.com/Marylin-Rosero/TALLER-GRUPAL-MRL/assets/169502533/f91c024a-9077-4815-8f83-8901c7fddca4)
-
-![347049406-b04197d9-6ff6-4527-a7ed-28014f4d8e7d](https://github.com/Marylin-Rosero/TALLER-GRUPAL-MRL/assets/169502533/db6be003-d1c8-420f-8c64-506cde519b1b)
+Consultar los resultados de los conductores y constructores de Fórmula 1.
+Visualizar gráficos de barras con los resultados de los conductores y constructores.
+![d113d6f0-cce3-42ac-b7fe-d4fe6d87afe1](https://github.com/user-attachments/assets/10865dc4-ce13-4e1e-9b8d-3d582890c6ec)
+![41512f49-c32b-4ee2-aca4-1b2aa35be2de](https://github.com/user-attachments/assets/0b42d717-e669-4114-8aff-e3543e75c53f)
+![ee71b5be-0b15-43af-920c-a0de0f3be7ea](https://github.com/user-attachments/assets/778806e1-1f5d-4c9b-b9bc-688d41b92b42)
+![82dd8e99-ea4e-4ebb-ab3b-19f9d58c539c](https://github.com/user-attachments/assets/514a7967-1f59-44c4-b3e2-7d513d623d3a)
+![06c6dfbc-6e2e-4219-8a69-6231801284d5](https://github.com/user-attachments/assets/f382a786-27e8-47dc-bfee-09b4dad759d8)
